@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sign Up</title>
+</head>
+<body>
+<form method = "post" action="/user" class="form-group">
+    <label>Name
+        <input name="username" type="text" th:value = "${username}">
+    </label>
+    <label>Email
+        <input type="email" name="email" th:value="${email}">
+    </label>
+    <label>Password
+        <input name="password" type="password">
+    </label>
+    <label>Verify Password
+        <input name="verify" type="password">
+    </label>
+    <p th:text="${error}"></p>
+    <input type="submit" text="Submit">
+</form>
+
+</body>
+</html>
+
+
+<!--Include an additional password input field to verify the password input.-->
